@@ -1,0 +1,48 @@
+body{
+    padding:5px;
+    margin:10px
+}
+.super{
+    margin-top: 17px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f9fa;
+}
+.data_of_super_hero{
+    width:50%;
+    margin:5px;
+    padding: 5px;
+
+}
+/* design heading !! */
+h1{
+    font-style: oblique;
+  }
+#remove_button{
+    padding-top: 14%;
+}
+#fav_image{
+    border-radius: 45%;
+    width:150px;
+    height: 100px;
+    padding-top: 25px;
+    padding-right: 10px;
+}
+/* navigation bar coding */
+.nav{
+    background-color: #333;
+    height: 40px;
+    margin-top: -10px;
+    
+}
+.nav a{
+    float: left;
+    color: #f2f2f2;
+    padding: 10px ;
+    padding-left: 15px;
+    text-decoration: none;
+}
+.nav a:hover{
+    background-color: #ddd;
+}

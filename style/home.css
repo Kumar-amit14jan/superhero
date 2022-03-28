@@ -1,0 +1,52 @@
+/* navigation bar coding */
+.nav{
+  background-color: #333;
+  height: 40px;
+  margin-top: -10px;
+  
+}
+.nav a{
+  float: left;
+  color: #f2f2f2;
+  padding: 10px ;
+  padding-left: 15px;
+  text-decoration: none;
+}
+.nav a:hover{
+  background-color: #ddd;
+}
+/* design heading !! */
+h1{
+  font-style: oblique;
+}
+/* design search bar !! */
+#search_super_hero{
+  width: 450px;
+  height: 30px;
+  padding: 10px;
+}
+#search_super_hero_data{
+  padding :20px;
+}
+/* code on data searching */
+.search_string_data{
+  padding :20px;
+}
+#_hero_name{
+  padding: 5px;
+  order: 2;
+}
+#favourite{
+  margin-top: 10px;
+  order:1;
+}
+#favourite_button{
+  margin-bottom: -7px;
+}
+#some_details_of_super_hero{
+  display: flex;
+  flex-direction: row;
+}
+.image{
+  border: black;
+}
