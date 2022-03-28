@@ -93,7 +93,7 @@ document.addEventListener('click', (event) => {
       var id = event.target.parentNode.parentNode.parentNode.parentNode.id;
 //       window.open('../pages/superhero.html'+'?id='+id , "_self"); this is actual code 
 //       this code is only to make the git page active
-      window.open('superhero/pages/superhero.html'+'?id='+id , "_self");
+      window.open('../pages/superhero.html'+'?id='+id , "_self");
   }else if(event.target.id =="favourite_button"){
     // now add your super hero
     var id = event.target.parentNode.parentNode.parentNode.id;
