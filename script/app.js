@@ -1,5 +1,3 @@
-let search = document.getElementById("search_super_hero");
-let search_list = document.getElementById("search_data");
 let search_data = document.getElementById("search_super_hero");
 const url = "https://www.superheroapi.com/api.php/338148107599656/search/";
 const favourite ="./images/starfav.jpg";
@@ -20,6 +18,7 @@ async function search_superHero(search_data){
     let search_data = event.target.value;
     console.log("your search string",search_data);
     if (search_data.length < 4){  
+      document.getElementById("search_super_hero_data").style.fontSize ="25px";
       document.getElementById("search_super_hero_data").innerHTML="Add Some more character";
   }else{
     search_superHero(search_data);
@@ -30,7 +29,11 @@ async function search_superHero(search_data){
     function renderData(data){
       // Checking if there's anything found
       if(data.response=='error' || data.results.length === 0){
-          document.getElementById("search_super_hero_data").innerHTML = data.error;   
+        // adding message for client
+        document.getElementById("search_super_hero_data").style.fontSize ="25px";
+          document.getElementById("search_super_hero_data").innerHTML = data.error;
+
+           
       }
       else{
           // delete previous search super_hero_data
@@ -55,7 +58,6 @@ async function search_superHero(search_data){
     var data_Container = document.createElement('DIV');
     data_Container.id = data.id;
     data_Container.className ="search_string_data";
-    console.log(data.id);
     let image_location = notfavourite;
     var favourite_super_hero_index = JSON.parse(localStorage.getItem("id_of_favourite"));
     if(favourite_super_hero_index.indexOf(data.id) != -1){
@@ -79,8 +81,8 @@ async function search_superHero(search_data){
     return data_Container;
 }
 
-check_storage();
-function check_storage(){
+entry_in_localStorage();
+function entry_in_localStorage(){
   if(localStorage.getItem("id_of_favourite")==null){
     localStorage.setItem("id_of_favourite"  , JSON.stringify(Array(0)) );
   }
@@ -89,7 +91,7 @@ function check_storage(){
 document.addEventListener('click', (event) => {
   if(event.target.id == 'read_more'){
       var id = event.target.parentNode.parentNode.parentNode.parentNode.id;
-      window.open('./superhero.html'+'?id='+id , "_self");
+      window.open('../pages/superhero.html'+'?id='+id , "_self");
   }else if(event.target.id =="favourite_button"){
     // now add your super hero
     var id = event.target.parentNode.parentNode.parentNode.id;
@@ -108,6 +110,7 @@ document.addEventListener('click', (event) => {
       //send alert
       alert("Added to your list !!");
       }
+      // setting your local storage
       localStorage.setItem("id_of_favourite" ,JSON.stringify(all_favourite_list_of_super_hero));
     
     }

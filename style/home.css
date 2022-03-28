@@ -14,7 +14,10 @@
 }
 .nav a:hover{
   background-color: #ddd;
+
 }
+
+
 /* design heading !! */
 h1{
   font-style: oblique;
@@ -46,7 +49,4 @@ h1{
 #some_details_of_super_hero{
   display: flex;
   flex-direction: row;
-}
-.image{
-  border: black;
 }
