@@ -91,7 +91,7 @@ function entry_in_localStorage(){
 document.addEventListener('click', (event) => {
   if(event.target.id == 'read_more'){
       var id = event.target.parentNode.parentNode.parentNode.parentNode.id;
-      window.open('/superhero+'../pages/superhero.html'+'?id='+id , "_self");
+      window.open('/superhero'../pages/superhero.html'+'?id='+id , "_self");
   }else if(event.target.id =="favourite_button"){
     // now add your super hero
     var id = event.target.parentNode.parentNode.parentNode.id;
