@@ -43,7 +43,7 @@ document.addEventListener('click' ,(event)=>{
     if(event.target.id =="fav_image"){
         var id = event.target.parentNode.id;
         console.log(event.target.parentNode.id);
-        window.open('/pages/superhero.html'+'?id='+id , "_self");
+        window.open('../superhero.html'+'?id='+id , "_self");
     }
     if(event.target.id >0){
         var remove_list =event.target.parentNode.parentNode.id;
